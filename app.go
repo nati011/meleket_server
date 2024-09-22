@@ -6,12 +6,12 @@ import (
 	"os"
 	"time"
 
-	"github.com/gotify/server/v2/config"
-	"github.com/gotify/server/v2/database"
-	"github.com/gotify/server/v2/mode"
-	"github.com/gotify/server/v2/model"
-	"github.com/gotify/server/v2/router"
-	"github.com/gotify/server/v2/runner"
+	"github.com/meleket/server/v2/config"
+	"github.com/meleket/server/v2/database"
+	"github.com/meleket/server/v2/mode"
+	"github.com/meleket/server/v2/model"
+	"github.com/meleket/server/v2/router"
+	"github.com/meleket/server/v2/runner"
 )
 
 var (

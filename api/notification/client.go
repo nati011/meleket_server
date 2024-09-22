@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/gorilla/websocket"
-	"github.com/gotify/server/v2/model"
+	"github.com/meleket/server/v2/model"
 )
 
 const (

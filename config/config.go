@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	"github.com/gotify/configor"
-	"github.com/gotify/server/v2/mode"
+	"github.com/meleket/server/v2/mode"
 )
 
 // Configuration is stuff that can be configured externally per env variables or config file (config.yml).

@@ -3,8 +3,8 @@ package database
 import (
 	"time"
 
-	"github.com/gotify/server/v2/model"
 	"github.com/jinzhu/gorm"
+	"github.com/meleket/server/v2/model"
 )
 
 // GetApplicationByToken returns the application for the given token or nil.

@@ -10,10 +10,10 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
-	"github.com/gotify/server/v2/api"
-	"github.com/gotify/server/v2/auth"
-	"github.com/gotify/server/v2/mode"
-	"github.com/gotify/server/v2/model"
+	"github.com/meleket/server/v2/api"
+	"github.com/meleket/server/v2/auth"
+	"github.com/meleket/server/v2/mode"
+	"github.com/meleket/server/v2/model"
 )
 
 type API struct {

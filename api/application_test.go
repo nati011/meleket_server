@@ -13,10 +13,10 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/gotify/server/v2/mode"
-	"github.com/gotify/server/v2/model"
-	"github.com/gotify/server/v2/test"
-	"github.com/gotify/server/v2/test/testdb"
+	"github.com/meleket/server/v2/mode"
+	"github.com/meleket/server/v2/model"
+	"github.com/meleket/server/v2/test"
+	"github.com/meleket/server/v2/test/testdb"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )
