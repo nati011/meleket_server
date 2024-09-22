@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/gin-contrib/cors"
-	"github.com/gotify/server/v2/config"
-	"github.com/gotify/server/v2/mode"
+	"github.com/meleket/server/v2/config"
+	"github.com/meleket/server/v2/mode"
 	"github.com/stretchr/testify/assert"
 )
 

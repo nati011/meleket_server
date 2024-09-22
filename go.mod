@@ -1,4 +1,4 @@
-module github.com/gotify/server/v2
+module github.com/meleket/server/v2
 
 require (
 	github.com/fortytw2/leaktest v1.3.0

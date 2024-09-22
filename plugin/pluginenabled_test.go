@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
-	"github.com/gotify/server/v2/model"
-	"github.com/gotify/server/v2/test/testdb"
+	"github.com/meleket/server/v2/model"
+	"github.com/meleket/server/v2/test/testdb"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -2,7 +2,7 @@ package test
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/gotify/server/v2/model"
+	"github.com/meleket/server/v2/model"
 )
 
 // WithUser fake an authentication for testing.

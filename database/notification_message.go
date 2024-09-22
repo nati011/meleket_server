@@ -1,8 +1,8 @@
 package database
 
 import (
-	"github.com/gotify/server/v2/model"
 	"github.com/jinzhu/gorm"
+	"github.com/meleket/server/v2/model"
 )
 
 func (d *GormDatabase) GetNotificationMessageByID(id uint) (*model.NotificationMessage, error) {

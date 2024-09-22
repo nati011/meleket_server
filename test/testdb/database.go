@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gotify/server/v2/database"
-	"github.com/gotify/server/v2/model"
+	"github.com/meleket/server/v2/database"
+	"github.com/meleket/server/v2/model"
 	"github.com/stretchr/testify/assert"
 )
 

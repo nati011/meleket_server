@@ -12,7 +12,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/gotify/server/v2/config"
+	"github.com/meleket/server/v2/config"
 	"golang.org/x/crypto/acme/autocert"
 )
 

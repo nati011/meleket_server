@@ -5,12 +5,12 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/gotify/server/v2/auth/password"
-	"github.com/gotify/server/v2/model"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"    // enable the mysql dialect.
 	_ "github.com/jinzhu/gorm/dialects/postgres" // enable the postgres dialect.
 	_ "github.com/jinzhu/gorm/dialects/sqlite"   // enable the sqlite3 dialect.
+	"github.com/meleket/server/v2/auth/password"
+	"github.com/meleket/server/v2/model"
 )
 
 var mkdirAll = os.MkdirAll
