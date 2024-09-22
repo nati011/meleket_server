@@ -1,6 +1,6 @@
 <p align="center">
-    <a href="https://github.com/gotify/logo">
-        <img height="370px" src="https://raw.githubusercontent.com/gotify/logo/master/gotify-logo.png" />
+    <a href="https://github.com/nati011/meleket_server/blob/master/meleket-logo.png">
+        <img height="370px" src="https://github.com/nati011/meleket_server/blob/master/meleket-logo.png" />
     </a>
 </p>
 
