@@ -13,6 +13,8 @@ import (
 type NotificationMessageDatabase interface {
 	CreateNotificationMessage(notification_message *model.NotificationMessage) error
 	GetApplicationByToken(token string) (*model.Application, error)
+	MarkNotificationMessageAsSeen(id uint) error
+	GetUnreadNotificationMessages(clientID uint) ([]*model.NotificationMessage, error)
 }
 
 type NotificationMessageNotifier interface {
@@ -23,6 +25,30 @@ type NotificationMessageAPI struct {
 	DB       NotificationMessageDatabase
 	ClientDB ClientDatabase
 	Notifier NotificationMessageNotifier
+}
+
+func (a *NotificationMessageAPI) MarkNotificationMessageAsSeen(ctx *gin.Context) {
+	var id uint
+	if err := ctx.Bind(&id); err == nil {
+		err := a.DB.MarkNotificationMessageAsSeen(id)
+		if success := successOrAbort(ctx, 500, err); !success {
+			return
+		}
+	}
+}
+
+func (a *NotificationMessageAPI) GetUnreadNotificationMessages(ctx *gin.Context) {
+	var clientId uint
+	if err := ctx.Bind(&clientId); err == nil {
+		_, err := a.ClientDB.GetClientByID(clientId)
+		notifications, err := a.DB.GetUnreadNotificationMessages(clientId)
+		if success := successOrAbort(ctx, 500, err); !success {
+			return
+		}
+		ctx.JSON(200, notifications)
+	} else {
+		return
+	}
 }
 
 func (a *NotificationMessageAPI) CreateNotificationMessage(ctx *gin.Context) {

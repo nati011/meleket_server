@@ -11,6 +11,7 @@ type NotificationMessage struct {
 	Priority      int
 	Extras        []byte
 	Date          time.Time
+	Seen          bool
 }
 
 type NotificationMessageExternal struct {

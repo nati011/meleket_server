@@ -18,6 +18,7 @@ func (d *GormDatabase) GetMessageByID(id uint) (*model.Message, error) {
 	return nil, err
 }
 
+
 // CreateMessage creates a message.
 func (d *GormDatabase) CreateMessage(message *model.Message) error {
 	return d.DB.Create(message).Error
