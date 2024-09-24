@@ -206,7 +206,10 @@ func Create(db *database.GormDatabase, vInfo *model.VersionInfo, conf *config.Co
 			// notification.DELETE("/:id", notificationMessageHandler.DeleteMessage)
 
 			notification.PATCH("/:id", notificationMessageHandler.MarkNotificationMessageAsSeen)
-			notification.GET("", notificationMessageHandler.GetUnreadNotificationMessages)
+
+			notification.GET("", notificationMessageHandler.GetAllNotificationMessages)
+
+			notification.GET("/unread", notificationMessageHandler.GetUnreadNotificationMessages)
 		}
 
 		clientAuth.GET("/stream", streamHandler.Handle)

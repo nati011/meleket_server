@@ -47,7 +47,7 @@ func (d *GormDatabase) CreateNotificationMessage(notification_message *model.Not
 	return d.DB.Create(notification_message).Error
 }
 
-func (d *GormDatabase) GetNotificationMessageByClient(clientID uint) ([]*model.NotificationMessage, error) {
+func (d *GormDatabase) GetNotificationMessages(clientID uint) ([]*model.NotificationMessage, error) {
 	var messages []*model.NotificationMessage
 	err := d.DB.Joins("JOIN applications ON applications.client_id = ?", clientID).
 		Where("messages.application_id = applications.id").Order("id desc").Find(&messages).Error
