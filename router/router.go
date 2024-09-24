@@ -199,6 +199,16 @@ func Create(db *database.GormDatabase, vInfo *model.VersionInfo, conf *config.Co
 			message.DELETE("/:id", messageHandler.DeleteMessage)
 		}
 
+		notification := clientAuth.Group("/notification")
+		{
+			// notification.DELETE("", notificationMessageHandler.DeleteMessages)
+
+			// notification.DELETE("/:id", notificationMessageHandler.DeleteMessage)
+
+			notification.PATCH("/:id", notificationMessageHandler.MarkNotificationMessageAsSeen)
+			notification.GET("", notificationMessageHandler.GetUnreadNotificationMessages)
+		}
+
 		clientAuth.GET("/stream", streamHandler.Handle)
 
 		clientAuth.GET("/notification/:clientToken", notificationHandler.Handle)
